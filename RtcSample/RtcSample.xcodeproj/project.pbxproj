@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0165F5E12244C02A001EAB3A /* RemoteViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0165F5E02244C02A001EAB3A /* RemoteViewModel.m */; };
+		01E5FAC22248D2B000925B4D /* LocalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E5FAC12248D2B000925B4D /* LocalView.m */; };
+		6489C633225B3AEE009BC6B7 /* RemoteUserCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6489C631225B3AED009BC6B7 /* RemoteUserCollectionViewItem.m */; };
+		6489C634225B3AEE009BC6B7 /* RemoteUserCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6489C632225B3AEE009BC6B7 /* RemoteUserCollectionViewItem.xib */; };
 		6C7998062201D467004FE646 /* AliRTCSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7998042201D467004FE646 /* AliRTCSdk.framework */; };
 		6C7998082201D479004FE646 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7998052201D467004FE646 /* UTDID.framework */; };
 		6C7998092201D479004FE646 /* UTDID.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7998052201D467004FE646 /* UTDID.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -45,6 +49,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0165F5DF2244C02A001EAB3A /* RemoteViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteViewModel.h; sourceTree = "<group>"; };
+		0165F5E02244C02A001EAB3A /* RemoteViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteViewModel.m; sourceTree = "<group>"; };
+		01E5FAC02248D2B000925B4D /* LocalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalView.h; sourceTree = "<group>"; };
+		01E5FAC12248D2B000925B4D /* LocalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalView.m; sourceTree = "<group>"; };
+		6489C630225B3AED009BC6B7 /* RemoteUserCollectionViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteUserCollectionViewItem.h; sourceTree = "<group>"; };
+		6489C631225B3AED009BC6B7 /* RemoteUserCollectionViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteUserCollectionViewItem.m; sourceTree = "<group>"; };
+		6489C632225B3AEE009BC6B7 /* RemoteUserCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemoteUserCollectionViewItem.xib; sourceTree = "<group>"; };
 		6C7998042201D467004FE646 /* AliRTCSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AliRTCSdk.framework; sourceTree = "<group>"; };
 		6C7998052201D467004FE646 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
 		6E1B00DF20E63D370008CC3B /* RtcSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RtcSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +145,13 @@
 				6E1B00E320E63D370008CC3B /* AppDelegate.m */,
 				6E1B00E520E63D370008CC3B /* ViewController.h */,
 				6E1B00E620E63D370008CC3B /* ViewController.m */,
+				0165F5DF2244C02A001EAB3A /* RemoteViewModel.h */,
+				0165F5E02244C02A001EAB3A /* RemoteViewModel.m */,
+				6489C630225B3AED009BC6B7 /* RemoteUserCollectionViewItem.h */,
+				6489C631225B3AED009BC6B7 /* RemoteUserCollectionViewItem.m */,
+				6489C632225B3AEE009BC6B7 /* RemoteUserCollectionViewItem.xib */,
+				01E5FAC02248D2B000925B4D /* LocalView.h */,
+				01E5FAC12248D2B000925B4D /* LocalView.m */,
 				6E1B00E820E63D390008CC3B /* Assets.xcassets */,
 				6E1B00EA20E63D390008CC3B /* Main.storyboard */,
 				6E1B00ED20E63D390008CC3B /* Info.plist */,
@@ -237,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6489C634225B3AEE009BC6B7 /* RemoteUserCollectionViewItem.xib in Resources */,
 				6E1B00E920E63D390008CC3B /* Assets.xcassets in Resources */,
 				6E1B00EC20E63D390008CC3B /* Main.storyboard in Resources */,
 			);
@@ -250,10 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E1B00E720E63D370008CC3B /* ViewController.m in Sources */,
+				6489C633225B3AEE009BC6B7 /* RemoteUserCollectionViewItem.m in Sources */,
 				6E1B00EF20E63D390008CC3B /* main.m in Sources */,
 				6E1B00FF20E63D780008CC3B /* FakeAuthrization.m in Sources */,
 				6E1B00FB20E63D700008CC3B /* AliBaseHttpClient.m in Sources */,
+				01E5FAC22248D2B000925B4D /* LocalView.m in Sources */,
 				6E1B00FC20E63D700008CC3B /* AliRequestList.m in Sources */,
+				0165F5E12244C02A001EAB3A /* RemoteViewModel.m in Sources */,
 				6E1B00E420E63D370008CC3B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

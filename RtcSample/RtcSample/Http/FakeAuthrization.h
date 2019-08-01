@@ -11,7 +11,7 @@
 
 
 // 用户APP Server
-static NSString *AppServer   =  ;   //Your APP Server Address
+static NSString *AppServer   =  @"";   //Your APP Server Address
 
 
 @interface FakeAuthrization : NSObject
