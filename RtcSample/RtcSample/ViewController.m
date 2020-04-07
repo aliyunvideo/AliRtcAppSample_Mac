@@ -61,22 +61,6 @@
 @property (weak) IBOutlet NSTextField *screenSharingLabel;
 
 /**
- 音频采集
- */
-@property (weak) IBOutlet NSButton *audioCapture;
-
-/**
- 音频播放
- */
-@property (weak) IBOutlet NSButton *audioPlayer;
-
-//记录audioCapture点击状态
-@property (nonatomic, assign) BOOL isCapture;
-
-//记录audioPlayer点击状态
-@property (nonatomic, assign) BOOL isPlayer;
-
-/**
  RTC工程类
  */
 @property (nonatomic, strong) AliRtcEngine *engine;
@@ -155,26 +139,53 @@
 #pragma mark - Action
 // 点击确认按钮
 - (IBAction)sureButtonClick:(NSButton *)sender {
-    if (_channelTextField.stringValue.length > 2 &&
-        _channelTextField.stringValue.length < 13 &&
-        [self isAllNum:_channelTextField.stringValue]) {
-        
-        NSInteger num = random() % 100000 + 1000;
-        _userName = [NSString stringWithFormat:@"%zd", num];
-        // 向服务器请求鉴权信息
-        __weak typeof(self)weakSelf = self;
-        [FakeAuthrization GetPassportFromAppServer:_channelTextField.stringValue userName:_userName block:^(AliRtcAuthInfo *loginModel, NSError *error) {
-            if (error) {
-                [weakSelf showNotice:@"数据请求失败"];
-            } else {
-                weakSelf.authInfo = loginModel;
-                //初始化SDK, 开启本地预览
-                [weakSelf startPreview];
-            }
-        }];
-    } else {
-        [self showNotice:@"请输入3-12位数字"];
-    }
+    //这部分是通过appserver地址请求获取鉴权信息authInfo的代码逻辑
+    
+//    if (_channelTextField.stringValue.length > 2 &&
+//        _channelTextField.stringValue.length < 13 &&
+//        [self isAllNum:_channelTextField.stringValue]) {
+//
+//        NSInteger num = random() % 100000 + 1000;
+//        _userName = [NSString stringWithFormat:@"%zd", num];
+//        // 向服务器请求鉴权信息
+//        __weak typeof(self)weakSelf = self;
+//        [FakeAuthrization GetPassportFromAppServer:_channelTextField.stringValue userName:_userName block:^(AliRtcAuthInfo *loginModel, NSError *error) {
+//            if (error) {
+//                [weakSelf showNotice:@"数据请求失败"];
+//            } else {
+//                weakSelf.authInfo = loginModel;
+//                //初始化SDK, 开启本地预览
+//                [weakSelf startPreview];
+//            }
+//        }];
+//    } else {
+//        [self showNotice:@"请输入3-12位数字"];
+//    }
+    
+    
+    //下面是手动输入鉴权信息authInfo的代码逻辑
+    //AliRtcAuthInfo 配置项
+    NSString *AppID   =  @"";
+    NSString *userID  =  @"";
+    NSString *channelID  =  @"";
+    NSString *nonce  =  @"";
+    long long timestamp = 0;
+    NSString *token  =  @"";
+    NSArray <NSString *> *GSLB  =  @[@""];
+    NSArray <NSString *> *agent =  @[@""];
+    
+    _authInfo = [[AliRtcAuthInfo alloc] init];
+    _authInfo.appid = AppID;
+    _authInfo.user_id = userID;
+    _authInfo.channel = channelID;
+    _authInfo.nonce = nonce;
+    _authInfo.timestamp = timestamp;
+    _authInfo.token = token;
+    _authInfo.gslb = GSLB;
+    _authInfo.agent = agent;
+    
+    //初始化SDK, 开启本地预览
+    [self startPreview];
 }
 
 //初始化SDK, 开启本地预览
@@ -187,22 +198,6 @@
         
         // 设置自动推拉流
         [weakSelf.engine setAutoPublish:YES withAutoSubscribe:YES];
-        
-        //音频采集
-        if (self.isCapture) {
-            [self.engine startAudioCapture];
-        }else{
-            [self.engine stopAudioCapture];
-        }
-        self.audioCapture.enabled = NO;
-        
-        //音频播放
-        if (self.isPlayer) {
-            [self.engine startAudioPlayer];
-        }else{
-            [self.engine stopAudioPlayer];
-        }
-        self.audioPlayer.enabled = NO;
         
         // 开启本地预览
         [weakSelf setupPreview];
@@ -243,9 +238,6 @@
     _startButton.hidden = true;
     _screenButton.hidden = true;
     _screenSharingLabel.hidden = true;
-    
-    self.audioCapture.enabled = YES;
-    self.audioPlayer.enabled = YES;
     
     @synchronized (self) {
         for (NSInteger i = self.remoteModelArr.count - 1; i >= 0; i--) {
@@ -475,10 +467,6 @@
         [self switchClick:isOn track:track uid:uid model:model];
     };
     
-    item.mediaInfoBlock = ^{
-        [self mediaInfoClick:track uid:uid];
-    };
-    
     return item;
 }
 
@@ -493,21 +481,6 @@
         canvas.mirrorMode = AliRtcRenderMirrorModeAllDisabled;
     }
     [self.engine setRemoteViewConfig:canvas uid:uid forTrack:track];
-}
-
-//获取当前的媒体流信息
-- (void)mediaInfoClick:(AliRtcVideoTrack)track uid:(NSString *)uid {
-    NSString *mediaInfoCamera = [self.engine getMediaInfoWithUserId:uid videoTrack:track keys:@[@"Height",@"Width",@"FPS",@"LossRate"]];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSAlert * alert = [[NSAlert alloc]init];
-        alert.messageText = @"媒体流信息";
-        alert.alertStyle = NSAlertStyleInformational;
-        [alert addButtonWithTitle:@"取消"];
-        [alert setInformativeText:mediaInfoCamera];
-        [alert beginSheetModalForWindow:[self.view window] completionHandler:^(NSModalResponse returnCode) {
-            
-        }];
-    });
 }
 
 
@@ -556,14 +529,5 @@
     }
 }
 
-//音频采集点击事件
-- (IBAction)audioCaptureClick:(id)sender {
-    self.isCapture = !self.isCapture;
-}
-
-//音频播放点击事件
-- (IBAction)audioPlayerClick:(id)sender {
-    self.isPlayer = !self.isPlayer;
-}
 
 @end

@@ -29,10 +29,5 @@
     self.isClick = !self.isClick;
 }
 
-- (IBAction)mediaInfoButtonClick:(id)sender {
-    if (self.mediaInfoBlock) {
-        self.mediaInfoBlock();
-    }
-}
 
 @end

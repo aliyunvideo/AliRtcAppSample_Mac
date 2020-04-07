@@ -11,9 +11,6 @@
 		01E5FAC22248D2B000925B4D /* LocalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E5FAC12248D2B000925B4D /* LocalView.m */; };
 		6489C633225B3AEE009BC6B7 /* RemoteUserCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6489C631225B3AED009BC6B7 /* RemoteUserCollectionViewItem.m */; };
 		6489C634225B3AEE009BC6B7 /* RemoteUserCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6489C632225B3AEE009BC6B7 /* RemoteUserCollectionViewItem.xib */; };
-		6C7998062201D467004FE646 /* AliRTCSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7998042201D467004FE646 /* AliRTCSdk.framework */; };
-		6C7998082201D479004FE646 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7998052201D467004FE646 /* UTDID.framework */; };
-		6C7998092201D479004FE646 /* UTDID.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7998052201D467004FE646 /* UTDID.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E1B00E420E63D370008CC3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B00E320E63D370008CC3B /* AppDelegate.m */; };
 		6E1B00E720E63D370008CC3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B00E620E63D370008CC3B /* ViewController.m */; };
 		6E1B00E920E63D390008CC3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E1B00E820E63D390008CC3B /* Assets.xcassets */; };
@@ -32,6 +29,12 @@
 		6E1B011220E63E060008CC3B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1B011120E63E060008CC3B /* libz.tbd */; };
 		6E1B011420E63E0B0008CC3B /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1B011320E63E0B0008CC3B /* libcurl.tbd */; };
 		6E1B011620E63EFE0008CC3B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1B011520E63EFE0008CC3B /* CoreVideo.framework */; };
+		73B8A36A241B9D2C0079E89A /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8A367241B9D2B0079E89A /* UTDID.framework */; };
+		73B8A36B241B9D2C0079E89A /* alivcffmpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8A368241B9D2C0079E89A /* alivcffmpeg.framework */; };
+		73B8A36C241B9D2C0079E89A /* AliRTCSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8A369241B9D2C0079E89A /* AliRTCSdk.framework */; };
+		73B8A36D241B9DD20079E89A /* AliRTCSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8A369241B9D2C0079E89A /* AliRTCSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73B8A36E241B9DD50079E89A /* alivcffmpeg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8A368241B9D2C0079E89A /* alivcffmpeg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73B8A36F241B9DD70079E89A /* UTDID.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8A367241B9D2B0079E89A /* UTDID.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,7 +44,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6C7998092201D479004FE646 /* UTDID.framework in Embed Frameworks */,
+				73B8A36F241B9DD70079E89A /* UTDID.framework in Embed Frameworks */,
+				73B8A36E241B9DD50079E89A /* alivcffmpeg.framework in Embed Frameworks */,
+				73B8A36D241B9DD20079E89A /* AliRTCSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,8 +61,6 @@
 		6489C630225B3AED009BC6B7 /* RemoteUserCollectionViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteUserCollectionViewItem.h; sourceTree = "<group>"; };
 		6489C631225B3AED009BC6B7 /* RemoteUserCollectionViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteUserCollectionViewItem.m; sourceTree = "<group>"; };
 		6489C632225B3AEE009BC6B7 /* RemoteUserCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemoteUserCollectionViewItem.xib; sourceTree = "<group>"; };
-		6C7998042201D467004FE646 /* AliRTCSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AliRTCSdk.framework; sourceTree = "<group>"; };
-		6C7998052201D467004FE646 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
 		6E1B00DF20E63D370008CC3B /* RtcSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RtcSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1B00E220E63D370008CC3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E1B00E320E63D370008CC3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +87,9 @@
 		6E1B011120E63E060008CC3B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6E1B011320E63E0B0008CC3B /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
 		6E1B011520E63EFE0008CC3B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		73B8A367241B9D2B0079E89A /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
+		73B8A368241B9D2C0079E89A /* alivcffmpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = alivcffmpeg.framework; sourceTree = "<group>"; };
+		73B8A369241B9D2C0079E89A /* AliRTCSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AliRTCSdk.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,17 +97,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B8A36A241B9D2C0079E89A /* UTDID.framework in Frameworks */,
+				73B8A36C241B9D2C0079E89A /* AliRTCSdk.framework in Frameworks */,
 				6E1B011620E63EFE0008CC3B /* CoreVideo.framework in Frameworks */,
 				6E1B011420E63E0B0008CC3B /* libcurl.tbd in Frameworks */,
 				6E1B011220E63E060008CC3B /* libz.tbd in Frameworks */,
 				6E1B011020E63E010008CC3B /* libresolv.tbd in Frameworks */,
 				6E1B010E20E63DFA0008CC3B /* libstdc++.tbd in Frameworks */,
-				6C7998082201D479004FE646 /* UTDID.framework in Frameworks */,
 				6E1B010C20E63DF20008CC3B /* CoreMediaIO.framework in Frameworks */,
 				6E1B010A20E63DED0008CC3B /* CoreMedia.framework in Frameworks */,
 				6E1B010820E63DE70008CC3B /* CoreAudio.framework in Frameworks */,
+				73B8A36B241B9D2C0079E89A /* alivcffmpeg.framework in Frameworks */,
 				6E1B010620E63DE20008CC3B /* AudioToolbox.framework in Frameworks */,
-				6C7998062201D467004FE646 /* AliRTCSdk.framework in Frameworks */,
 				6E1B010420E63DDC0008CC3B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,8 +119,9 @@
 		6C7998032201D467004FE646 /* AliRTCSdk */ = {
 			isa = PBXGroup;
 			children = (
-				6C7998042201D467004FE646 /* AliRTCSdk.framework */,
-				6C7998052201D467004FE646 /* UTDID.framework */,
+				73B8A369241B9D2C0079E89A /* AliRTCSdk.framework */,
+				73B8A368241B9D2C0079E89A /* alivcffmpeg.framework */,
+				73B8A367241B9D2B0079E89A /* UTDID.framework */,
 			);
 			name = AliRTCSdk;
 			path = RtcSample/AliRTCSdk;

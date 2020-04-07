@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -762,20 +762,6 @@
                                     <action selector="exitButtonClick:" target="XfG-lQ-9wD" id="xGd-Bb-RpC"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PRB-Ke-R0n">
-                                <rect key="frame" x="118" y="356" width="87" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="83" id="FCa-0O-7sf"/>
-                                    <constraint firstAttribute="height" constant="22" id="YM8-ii-6np"/>
-                                </constraints>
-                                <buttonCell key="cell" type="check" title="音频采集" bezelStyle="regularSquare" imagePosition="left" inset="2" id="3hb-zw-3G4">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="audioCaptureClick:" target="XfG-lQ-9wD" id="2Fa-QF-YOU"/>
-                                </connections>
-                            </button>
                             <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wM3-dy-vWT">
                                 <rect key="frame" x="130" y="19" width="80" height="31"/>
                                 <constraints>
@@ -850,20 +836,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XWY-Pa-okO" userLabel="音频播放">
-                                <rect key="frame" x="221" y="356" width="87" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="83" id="DOn-V7-IlP"/>
-                                    <constraint firstAttribute="height" constant="22" id="O93-PB-Hwz"/>
-                                </constraints>
-                                <buttonCell key="cell" type="check" title="音频播放" bezelStyle="regularSquare" imagePosition="left" inset="2" id="oIN-dc-SVH">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="audioPlayerClick:" target="XfG-lQ-9wD" id="oka-zp-Rfu"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="5Nq-eb-Ff0" firstAttribute="top" secondItem="tPv-tT-hya" secondAttribute="bottom" constant="20" id="2Ft-Gh-gwk"/>
@@ -874,29 +846,23 @@
                             <constraint firstItem="oCK-Ri-Hgj" firstAttribute="leading" secondItem="hcG-2A-9oG" secondAttribute="trailing" constant="300" id="L2q-F4-fRX"/>
                             <constraint firstItem="tPv-tT-hya" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="Oyd-Yy-Gvz"/>
                             <constraint firstItem="SiO-0C-lGA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="52" id="R4n-KA-eVt"/>
-                            <constraint firstItem="XWY-Pa-okO" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Rht-ML-oX8"/>
                             <constraint firstItem="Gc9-vL-C78" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="VPL-pa-E7z"/>
                             <constraint firstItem="wM3-dy-vWT" firstAttribute="top" secondItem="V8P-gc-doa" secondAttribute="bottom" constant="10" id="WuC-oR-dD7"/>
                             <constraint firstAttribute="bottom" secondItem="Gc9-vL-C78" secondAttribute="bottom" constant="30" id="X0A-YT-5T1"/>
                             <constraint firstItem="V8P-gc-doa" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="XRY-eN-21i"/>
                             <constraint firstItem="5Nq-eb-Ff0" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="aMU-jf-MdY"/>
-                            <constraint firstItem="XWY-Pa-okO" firstAttribute="leading" secondItem="PRB-Ke-R0n" secondAttribute="trailing" constant="20" id="bxF-JH-Yg6"/>
                             <constraint firstAttribute="trailing" secondItem="oCK-Ri-Hgj" secondAttribute="trailing" constant="10" id="crB-Y4-MVD"/>
                             <constraint firstItem="tPv-tT-hya" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="esO-ph-dk5"/>
                             <constraint firstItem="oCK-Ri-Hgj" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="gDJ-o2-iPS"/>
                             <constraint firstAttribute="trailing" secondItem="V8P-gc-doa" secondAttribute="trailing" id="him-sA-VcS"/>
-                            <constraint firstItem="PRB-Ke-R0n" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="jCQ-CX-J88"/>
                             <constraint firstAttribute="trailing" secondItem="SiO-0C-lGA" secondAttribute="trailing" constant="40" id="lsW-9a-Al6"/>
                             <constraint firstAttribute="bottom" secondItem="wM3-dy-vWT" secondAttribute="bottom" constant="20" id="mjr-5n-fU9"/>
                             <constraint firstItem="Gc9-vL-C78" firstAttribute="leading" secondItem="wM3-dy-vWT" secondAttribute="trailing" constant="40" id="qcA-7E-9jh"/>
-                            <constraint firstItem="PRB-Ke-R0n" firstAttribute="leading" secondItem="hcG-2A-9oG" secondAttribute="trailing" constant="20" id="rr8-4K-DQj"/>
                             <constraint firstItem="SiO-0C-lGA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="40" id="vuL-mm-CCx"/>
                             <constraint firstItem="hcG-2A-9oG" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="z0B-if-jg5"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="audioCapture" destination="PRB-Ke-R0n" id="Zmd-oE-2Oh"/>
-                        <outlet property="audioPlayer" destination="XWY-Pa-okO" id="qRc-lr-okW"/>
                         <outlet property="channelTextField" destination="tPv-tT-hya" id="hwY-Wu-lK2"/>
                         <outlet property="exitButton" destination="hcG-2A-9oG" id="xoC-dG-V0m"/>
                         <outlet property="localView" destination="V8P-gc-doa" id="JMv-9b-n8y"/>
